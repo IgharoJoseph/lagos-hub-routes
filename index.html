@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Lagos Hub Route Map</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="map-shell">
+
+    <div id="map"></div>
+
+    <div class="brand-mark">
+      <span class="brand-line">Lagos Hub</span>
+      <span class="brand-line brand-line--accent">Route Map</span>
+    </div>
+
+    <div class="mobile-ui-dock">
+
+      <section class="map-legend">
+        <div class="legend-item">
+          <span class="legend-marker hub-legend-marker"></span>
+          <span>Hub</span>
+        </div>
+
+        <div class="legend-item">
+          <span class="legend-marker destination-legend-marker"></span>
+          <span>Destination</span>
+        </div>
+
+        <div class="legend-item">
+          <span class="legend-line"></span>
+          <span>Route</span>
+        </div>
+
+        <div class="legend-item">
+          <span class="legend-marker buffer-legend-marker"></span>
+          <span>500m Buffer</span>
+        </div>
+      </section>
+
+      <aside class="control-panel">
+        <div class="control-panel-header">
+          <h2>Route Finder</h2>
+          <p>Select a hub and destination</p>
+        </div>
+
+        <div class="control-group">
+          <label for="hubSelect">Hub</label>
+          <select id="hubSelect">
+            <option value="">Loading hubs...</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="destinationSelect">Destination</label>
+          <select id="destinationSelect" disabled>
+            <option value="">Select a hub first</option>
+          </select>
+        </div>
+
+        <div class="buffer-control">
+          <label class="toggle-label" for="bufferToggle">
+            <input type="checkbox" id="bufferToggle">
+            <span class="toggle-switch"></span>
+            <span class="toggle-text">500m Buffer</span>
+          </label>
+        </div>
+
+        <div class="control-panel-actions">
+          <button id="clearRouteBtn" class="clear-btn" type="button">Clear</button>
+          <button id="locateBtn" class="location-btn" type="button">My Location</button>
+        </div>
+      </aside>
+
+      <section id="routeInfo" class="destination-board hidden">
+        <div class="board-plate">
+          <small class="board-eyebrow">Destination</small>
+          <h2 id="destinationName" class="board-name">—</h2>
+
+          <div class="board-stats">
+            <div class="board-stat">
+              <small>Distance</small>
+              <strong id="distanceValue">—</strong>
+            </div>
+
+            <div class="board-stat">
+              <small>Travel Time</small>
+              <strong id="durationValue">—</strong>
+            </div>
+          </div>
+
+          <div class="board-actions">
+            <button id="googleMapsBtn" class="primary-btn" type="button">
+              Open in Google Maps
+            </button>
+
+            <button id="shareBtn" class="secondary-btn" type="button">
+              Share Route
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <div id="loadingOverlay" class="loading-overlay hidden">
+      <div class="spinner"></div>
+      <p>Loading route...</p>
+    </div>
+
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
