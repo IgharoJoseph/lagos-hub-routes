@@ -2,8 +2,8 @@
 
 const HUB_FILES = {
   "Barracks": "geojson/Barracks_routes.geojson",
-  "Ikotun terminal": "geojson/Ikotun_terminal_routes.geojson",
-  "Inner Marina": "geojson/Inner_Marina_routes.geojson",
+  "Ikotun": "geojson/Ikotun_terminal_routes.geojson",
+  "Marina": "geojson/Inner_Marina_routes.geojson",
   "Ojota": "geojson/Ojota_routes.geojson",
   "Odunade": "geojson/Odunade_routes.geojson",
   "Waec": "geojson/Waec_routes.geojson",
