@@ -20,16 +20,16 @@ const HUB_FILES = {
 };
 
 /*
-  500M BUFFER
+  1000M BUFFER
   ------------------------------------------------------------
   NOTE: destinations in these files are route endpoints — by
   definition most sit kilometers from the hub, not meters. With
-  a literal 500m radius, expect the destination list to come up
+  a literal 1000m radius, expect the destination list to come up
   empty for most hubs (the circle drawn on the map will confirm
-  visually why). Adjust this value if 500m isn't actually the
+  visually why). Adjust this value if 1000m isn't actually the
   radius you want to filter by.
 */
-const HUB_BUFFER_METRES = 500;
+const HUB_BUFFER_METRES = 1000;
 
 const hubSelect = document.getElementById("hubSelect");
 const destinationSelect = document.getElementById("destinationSelect");
