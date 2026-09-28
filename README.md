@@ -59,7 +59,7 @@ Required property keys (case-insensitive, `app.js` looks up several common spell
 ## Features
 
 - **Hub / destination selection** — choosing a hub loads its GeoJSON (cached after first load), plots the hub marker, and populates the destination dropdown.
-- **500m buffer** — toggle in the Route Finder panel. When on, only destinations within `HUB_BUFFER_METRES` (set in `app.js`, default `500`) of the hub are selectable, and a dashed circle of that radius is drawn on the map.
+- **1000m buffer** — toggle in the Route Finder panel. When on, only destinations within `HUB_BUFFER_METRES` (set in `app.js`, default `1000`) of the hub are selectable, and a dashed circle of that radius is drawn on the map.
 - **Route display** — selecting a destination draws the route line, drops a destination pin, and shows distance/time on the "destination board" (styled like a danfo bus destination board).
 - **My Location** — uses the browser's Geolocation API to center the map on the user.
 - **Google Maps handoff** — opens directions to the selected destination in Google Maps.
